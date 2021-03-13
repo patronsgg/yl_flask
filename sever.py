@@ -3,10 +3,9 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 
-@app.route('/distribution')
-def distribution():
-    return render_template('index.html', persons=['Ридли Скотт', 'Энди Уир', 'Марк Уотни',
-                                                  'Венката Капур', 'Тедди Сандерс', 'Шон Бин'])
+@app.route('/table/<sex>/<age>')
+def distribution(sex, age):
+    return render_template('index.html', sex=sex, age=int(age))
 
 
 if __name__ == '__main__':

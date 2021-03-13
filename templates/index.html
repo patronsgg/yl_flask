@@ -1,15 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h2>Размещение по каютам</h2>
-    <div>
-        {% set cabin = 'Каюта №' %}
-        {% for name in persons %}
-            {% if loop.first %}
-                <h4>{{ name }} - {{ cabin }} {{ loop.index }} - капитан корабля</h4>
-            {% else %}
-                <h4>{{ name }} - {{ cabin }} {{ loop.index }}</h4>
-            {% endif %}
-        {% endfor %}
+    <h2>Оформление каюты</h2>
+    <div id="fr_div">
+        {% if sex == 'male' and age < 21 %}
+            {% set color = "young_male" %}
+            {% set img = "img/young.png" %}
+        {% elif sex == 'male' and age >= 21 %}
+            {% set color = "old_male" %}
+            {% set img = "img/old.jpg" %}
+        {% elif sex == 'female' and age < 21 %}
+            {% set color = "young_female" %}
+            {% set img = "img/young.png" %}
+        {% else %}
+            {% set color = "old_female" %}
+            {% set img = "img/old.jpg" %}
+        {% endif %}
+
+        <div class="form" id="{{ color }}">
+            <p>Цвет стен</p>
+        </div>
+        <div class="form">
+            <p id="p1">Эмблема</p>
+            <img src="{{ url_for('static', filename=img) }}">
+        </div>
     </div>
 {% endblock %}

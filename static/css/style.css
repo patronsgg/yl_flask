@@ -2,6 +2,46 @@ h2 {
     text-align: center;
 }
 
-div {
-    padding-left: 30%;
+#fr_div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.form {
+    float: left;
+    height: 100%;
+    width: 50%;
+}
+
+p {
+    background-color: grey;
+    text-align: center;
+}
+
+#young_female {
+    background-color: rgb(245, 141, 150);
+}
+
+#old_female {
+    background-color: rgb(252, 93, 154);
+}
+
+#old_male {
+    background-color: rgb(21, 22, 94);
+}
+
+#young_male {
+    background-color: rgb(36, 99, 182);
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#p1 {
+    margin-bottom: 0;
 }
