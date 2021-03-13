@@ -1,5 +1,7 @@
-#main_div {
-    padding-left: 40px;
-    margin: 0;
-    width: 70%;
+h2 {
+    text-align: center;
+}
+
+div {
+    padding-left: 30%;
 }
