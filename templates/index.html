@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-        {% if "инженер" in prof or "строитель" in prof %}
-            <div id="div_fr">
-                <h2>Инженерные тренажеры</h2>
-                <img src="{{ url_for('static', filename='img/1.png') }}" alt="">
-            </div>
+        <h1>Список профессий</h1>
+        {% if list == "ol" %}
+            {% for prof in list_prof %}
+            <p>{{ loop.index }}. {{prof}}</p>
+            {% endfor %}
+        {% elif list == "ul" %}
+            {% for prof in list_prof %}
+            <li>{{prof}}</li>
+            {% endfor %}
         {% else %}
-            <div>
-            <h2>Научные симуляторы</h2>
-            <img src="{{ url_for('static', filename='img/2.png') }}" alt="">
-            </div>
+            <h2>Неверное значение</h2>
         {% endif %}
 {% endblock %}
