@@ -4,9 +4,10 @@ h2, tr {
 
 table {
     border: 1px solid grey;
-    width: 100%;
+    width: 90%;
     border-collapse: collapse;
     height: 70%;
+    margin-left: 5%;
 }
 
 td {
