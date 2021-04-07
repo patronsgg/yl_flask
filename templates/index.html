@@ -2,7 +2,8 @@
 
 {% block content %}
     <h2>Оформление каюты</h2>
-    <div id="fr_div">
+    <table>
+        <tr><th>Цвет стен</th><th>Эмблема</th></tr>
         {% if sex == 'male' and age < 21 %}
             {% set color = "young_male" %}
             {% set img = "img/young.png" %}
@@ -16,13 +17,7 @@
             {% set color = "old_female" %}
             {% set img = "img/old.jpg" %}
         {% endif %}
+        <tr><td id="{{ color }}"></td><td><img src="{{ url_for('static', filename=img) }}"></td></tr>
+    <table>
 
-        <div class="form" id="{{ color }}">
-            <p>Цвет стен</p>
-        </div>
-        <div class="form">
-            <p id="p1">Эмблема</p>
-            <img src="{{ url_for('static', filename=img) }}">
-        </div>
-    </div>
 {% endblock %}

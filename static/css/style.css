@@ -1,18 +1,21 @@
-h2 {
+h2, tr {
     text-align: center;
 }
 
-#fr_div {
-    margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    height: 500px;
-    overflow: hidden;
+table {
+    border: 1px solid grey;
+    width: 90%;
+    border-collapse: collapse;
+    height: 70%;
+    margin-left: 5%;
 }
 
-.form {
-    float: left;
-    height: 100%;
+td {
+    width: 50%;
+}
+
+img {
+    height: 40%;
     width: 50%;
 }
 
@@ -37,11 +40,3 @@ p {
     background-color: rgb(36, 99, 182);
 }
 
-img {
-    height: 100%;
-    width: 100%;
-}
-
-#p1 {
-    margin-bottom: 0;
-}
