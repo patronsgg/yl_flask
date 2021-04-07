@@ -3,13 +3,17 @@
 {% block content %}
         <h1>Список профессий</h1>
         {% if list == "ol" %}
-            {% for prof in list_prof %}
-            <p>{{ loop.index }}. {{prof}}</p>
-            {% endfor %}
-        {% elif list == "ul" %}
+            <ol>
             {% for prof in list_prof %}
             <li>{{prof}}</li>
             {% endfor %}
+            </ol>
+        {% elif list == "ul" %}
+            <ul>
+        {% for prof in list_prof %}
+            <li>{{prof}}</li>
+            {% endfor %}
+            </ul>
         {% else %}
             <h2>Неверное значение</h2>
         {% endif %}
